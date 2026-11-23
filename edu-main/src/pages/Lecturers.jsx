@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { lecturersData } from '../data/mockData';
 import BookingModal from './BookingModal';
@@ -9,6 +10,12 @@ const Lecturers = () => {
   const openBooking = (lecturer, tariff) => setBooking({ lecturer, tariff });
   const closeBooking = () => setBooking(null);
 
+=======
+import React from 'react';
+import { lecturersData } from '../data/mockData';
+
+const Lecturers = () => {
+>>>>>>> 187f6b524bee40fddc28f339e1f3f26974cd2fb6
   return (
     <div className="lecturers-page">
       <h1 className="page-title">Лекторы</h1>
@@ -50,6 +57,7 @@ const Lecturers = () => {
 
               <div className="custom-block">
                 <h4>Тарифы:</h4>
+<<<<<<< HEAD
                 <ul className="tariffs-list">
                   {lecturer.tariffs.map((tariff, idx) => (
                     <li key={idx} className="tariff-item">
@@ -71,11 +79,20 @@ const Lecturers = () => {
                 >
                   Записаться на занятие
                 </button>
+=======
+                <ul>
+                  {lecturer.tariffs.map((tariff, idx) => (
+                    <li key={idx}>{tariff}</li>
+                  ))}
+                </ul>
+                <button className="btn-book">Записаться на занятие</button>
+>>>>>>> 187f6b524bee40fddc28f339e1f3f26974cd2fb6
               </div>
             </div>
           </div>
         ))}
       </div>
+<<<<<<< HEAD
 
       {booking && (
         <BookingModal
@@ -84,6 +101,8 @@ const Lecturers = () => {
           onClose={closeBooking}
         />
       )}
+=======
+>>>>>>> 187f6b524bee40fddc28f339e1f3f26974cd2fb6
     </div>
   );
 };
